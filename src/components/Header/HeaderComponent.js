@@ -35,13 +35,13 @@ const HeaderComponent = props => {
         </NavLink>
         <NavLink to="/app/history" exact activeClassName="active">
           <div className="bar">
-            <img src={HistoryIcon} alt="carros" />
+            <img src={HistoryIcon} alt="histórico" />
             <p>Histórico</p>
           </div>
         </NavLink>
-        <NavLink to="/home" exact activeClassName="active">
+        <NavLink to="/app/customers" exact activeClassName="active">
           <div className="bar">
-            <img src={CustomersIcon} alt="carros" />
+            <img src={CustomersIcon} alt="clientes" />
             <p>Clientes</p>
           </div>
         </NavLink>

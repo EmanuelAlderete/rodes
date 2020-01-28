@@ -1,6 +1,6 @@
 import React from "react";
 import ResetCss from "./styles/ResetCss";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, withRouter } from "react-router-dom";
 import Routes from "./routes";
 
 import { AppStyled, AppContentStyled } from "./styles/AppStyles";
@@ -20,4 +20,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withRouter(App);

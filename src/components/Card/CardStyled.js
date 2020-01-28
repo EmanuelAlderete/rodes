@@ -34,7 +34,7 @@ const CardStyled = styled.div`
     font-size: 0.8em;
   }
 
-  bold {
+  h6 {
     display: block;
     font-weight: bold;
   }
