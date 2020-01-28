@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import LoginPage from "./pages/Login/LoginPage";
 import App from "./App";
+import LoginPage from "./pages/Login/LoginPage";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
+      <Route path="/app/home" exact component={App} />
       <Route path="/login" exact component={LoginPage} />
-      <Route path="/app" component={App} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

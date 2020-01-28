@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 const SearchBarStyled = styled.div`
-  background: #fff;
+  background: none;
   max-width: 270px;
   margin: 0 auto;
-  padding: 4px 17px;
   height: 40px;
   line-height: 40px;
   display: flex;
@@ -25,11 +24,17 @@ const SearchBarStyled = styled.div`
 
   input {
     flex-basis: 90%;
+    background: #fff;
+    padding: 4px 17px;
   }
 
   button {
     float: right;
     flex-basis: 10%;
+  }
+
+  button.searchIcon {
+    background: #fff;
   }
 `;
 

@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 const HeaderStyled = styled.header`
+  box-sizing: border-box;
   background: #3268ea;
   padding: 15px 20px 0;
   display: flex;
   flex-wrap: wrap;
   height: 200px;
+  width: 100%;
   position: fixed;
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
 
   div.topNav {
     display: flex;
@@ -14,7 +19,7 @@ const HeaderStyled = styled.header`
     align-items: center;
     height: 25px;
     line-height: 25px;
-    flex-basis: 100%;
+    width: 100%;
   }
 
   div.topNav a {
@@ -48,7 +53,7 @@ const HeaderStyled = styled.header`
 
   div.bottomNav {
     display: flex;
-    flex-basis: 100%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
@@ -57,9 +62,11 @@ const HeaderStyled = styled.header`
     font-weight: bold;
   }
 
-  div.bottomNav div {
+  div.bottomNav a {
     text-align: center;
     flex: 0 0 33%;
+    color: #fff;
+    text-decoration: none;
   }
 
   div.bottomNav img {
@@ -72,8 +79,8 @@ const HeaderStyled = styled.header`
     border-left: 1px solid #fff;
   }
 
-  div.active {
-    color: #ccc;
+  .active p {
+    color: #092363;
   }
 `;
 

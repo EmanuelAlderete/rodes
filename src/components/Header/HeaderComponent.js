@@ -1,17 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import HeaderStyled from "./HeaderStyled";
 
 import HamburguerMenu from "../../assets/icons/hamburguer.svg";
 import LogoutIcon from "../../assets/icons/logout.svg";
 import ThumbnailIcon from "../../assets/icons/thumb.svg";
 import CarIcon from "../../assets/icons/car.svg";
-import CarActiveIcon from "../../assets/icons/car-active.svg";
 import HistoryIcon from "../../assets/icons/history.svg";
 import CustomersIcon from "../../assets/icons/customers.svg";
-import CustomersActiveIcon from "../../assets/icons/customers-active.svg";
 
-const HeaderComponent = () => {
+const HeaderComponent = props => {
   return (
     <HeaderStyled>
       <div className="topNav">
@@ -29,18 +27,24 @@ const HeaderComponent = () => {
         </div>
       </div>
       <div className="bottomNav">
-        <div className="active">
-          <img src={CarActiveIcon} alt="carros" />
-          <p>Na garagem</p>
-        </div>
-        <div className="bar">
-          <img src={HistoryIcon} alt="carros" />
-          <p>Histórico</p>
-        </div>
-        <div className="bar">
-          <img src={CustomersIcon} alt="carros" />
-          <p>Clientes</p>
-        </div>
+        <NavLink to="/app/home" activeClassName="active">
+          <div>
+            <img src={CarIcon} alt="carros" />
+            <p>Na Garagem</p>
+          </div>
+        </NavLink>
+        <NavLink to="/app/history" exact activeClassName="active">
+          <div className="bar">
+            <img src={HistoryIcon} alt="carros" />
+            <p>Histórico</p>
+          </div>
+        </NavLink>
+        <NavLink to="/home" exact activeClassName="active">
+          <div className="bar">
+            <img src={CustomersIcon} alt="carros" />
+            <p>Clientes</p>
+          </div>
+        </NavLink>
       </div>
     </HeaderStyled>
   );
