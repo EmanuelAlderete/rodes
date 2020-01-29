@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const CardStyled = styled.div`
+const CardStyled = styled(Link)`
   margin-top: 5px;
   background: #fff;
   display: flex;
@@ -12,6 +13,9 @@ const CardStyled = styled.div`
   box-sizing: border-box;
   margin: 15px auto;
   transition: 0.3s ease all;
+  text-decoration: none;
+  cursor: default;
+  color: #000;
 
   -webkit-box-shadow: -3px 3px 5px -1px rgba(0, 0, 0, 0.13);
   -moz-box-shadow: -3px 3px 5px -1px rgba(0, 0, 0, 0.13);
@@ -41,6 +45,11 @@ const CardStyled = styled.div`
 
   :hover {
     background: #ccc;
+  }
+
+  :visited {
+    color: #000;
+    text-decoration: none;
   }
 `;
 

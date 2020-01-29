@@ -27,16 +27,16 @@ const HeaderComponent = props => {
         </div>
       </div>
       <div className="bottomNav">
-        <NavLink to="/app/home" activeClassName="active">
-          <div>
-            <img src={CarIcon} alt="carros" />
-            <p>Na Garagem</p>
-          </div>
-        </NavLink>
         <NavLink to="/app/history" exact activeClassName="active">
-          <div className="bar">
+          <div>
             <img src={HistoryIcon} alt="histórico" />
             <p>Histórico</p>
+          </div>
+        </NavLink>
+        <NavLink to="/app/home" activeClassName="active">
+          <div className="bar">
+            <img src={CarIcon} alt="carros" />
+            <p>Home</p>
           </div>
         </NavLink>
         <NavLink to="/app/customers" exact activeClassName="active">

@@ -80,7 +80,8 @@ const HeaderStyled = styled.header`
   }
 
   .active p {
-    color: #092363;
+    color: #1c3d8d;
+    font-weight: lighter;
   }
 `;
 
