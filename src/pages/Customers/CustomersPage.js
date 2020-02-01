@@ -10,21 +10,6 @@ class CustomersPage extends React.Component {
     return (
       <CustomersPageStyled>
         <SearchBarComponent />
-        <CardComponent
-          customer={car.customer.name}
-          phone={car.customer.phone}
-          cardCustomer
-        />
-        <CardComponent
-          customer={car.customer.name}
-          phone={car.customer.phone}
-          cardCustomer
-        />
-        <CardComponent
-          customer={car.customer.name}
-          phone={car.customer.phone}
-          cardCustomer
-        />
       </CustomersPageStyled>
     );
   }

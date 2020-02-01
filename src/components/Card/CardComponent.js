@@ -7,6 +7,7 @@ import CustomerIcon from "../../assets/icons/customer.svg";
 const CardComponent = props => {
   const showDate = props.showDate;
   const cardCustomer = props.cardCustomer;
+  const car = props.object;
 
   if (showDate) {
     return (
@@ -14,9 +15,9 @@ const CardComponent = props => {
         <img src={CarCardIcon} alt="car" />
         <div>
           <h3>
-            {props.model} - {props.automaker}
+            {car.model} - {car.automaker}
           </h3>
-          <p>{props.customer}</p>
+          <p>{car.customer.name}</p>
         </div>
         <div className="date">
           <h6>D 27</h6>
@@ -30,8 +31,8 @@ const CardComponent = props => {
       <CardStyled>
         <img src={CustomerIcon} alt="car" />
         <div>
-          <h3>{props.customer}</h3>
-          <p>{props.phone}</p>
+          <h3>{car.customer.name}</h3>
+          <p>{car.customer.phone}</p>
         </div>
       </CardStyled>
     );
@@ -41,9 +42,9 @@ const CardComponent = props => {
         <img src={CarCardIcon} alt="car" />
         <div>
           <h3>
-            {props.model} - {props.automaker}
+            {car.model} - {car.automaker}
           </h3>
-          <p>{props.customer}</p>
+          <p>{car.customer.name}</p>
         </div>
       </CardStyled>
     );
