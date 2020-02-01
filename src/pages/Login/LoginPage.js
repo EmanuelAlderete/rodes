@@ -1,7 +1,7 @@
 import React from "react";
 
 import ResetCss from "../../styles/ResetCss";
-import LoginStyled from "./LoginStyled";
+import LoginStyled from "./LoginStyles";
 import Spinner from "../../components/Spinner/Spinner";
 
 import ThumbImg from "../../assets/icons/thumb.svg";

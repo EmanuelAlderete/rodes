@@ -1,5 +1,5 @@
 import React from "react";
-import HomeStyles from "./HomeStyled";
+import HomeStyles from "./HomeStyles";
 import SearchBarComponent from "../../components/SearchBar/SearchBarComponent";
 import CardComponent from "../../components/Card/CardComponent";
 

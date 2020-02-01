@@ -1,5 +1,5 @@
 import React from "react";
-import HistoryPageStyled from "./HistoryStyled";
+import HistoryPageStyled from "./HistoryPageStyles";
 import SearchBarComponent from "../../components/SearchBar/SearchBarComponent";
 import CardComponent from "../../components/Card/CardComponent";
 
