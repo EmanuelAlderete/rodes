@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { withRouter } from "react-router-dom";
 
 import CustomersPageStyled from "./CustomersStyles";
 import SearchBarComponent from "../../components/SearchBar/SearchBarComponent";

@@ -17,12 +17,12 @@ const HomePage = () => {
     setCars(data);
   };
 
+  const cards = cars.map(car => <CardComponent object={car} key={car._id} />);
+
   return (
     <HomeStyles>
       <SearchBarComponent />
-      {cars.map(car => (
-        <CardComponent object={car} key={car._id} />
-      ))}
+      {cards}
     </HomeStyles>
   );
 };
