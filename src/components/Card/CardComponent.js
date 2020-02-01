@@ -8,10 +8,11 @@ const CardComponent = props => {
   const showDate = props.showDate;
   const cardCustomer = props.cardCustomer;
   const car = props.object;
+  const customer = props.object;
 
   if (showDate) {
     return (
-      <CardStyled>
+      <CardStyled to={`/app/garage/${car._id}`}>
         <img src={CarCardIcon} alt="car" />
         <div>
           <h3>
@@ -28,17 +29,17 @@ const CardComponent = props => {
     );
   } else if (cardCustomer) {
     return (
-      <CardStyled>
+      <CardStyled to={`/app/garage/${car._id}`}>
         <img src={CustomerIcon} alt="car" />
         <div>
-          <h3>{car.customer.name}</h3>
-          <p>{car.customer.phone}</p>
+          <h3>{customer.name}</h3>
+          <p>{customer.phone}</p>
         </div>
       </CardStyled>
     );
   } else {
     return (
-      <CardStyled>
+      <CardStyled to={`/app/garage/${car._id}`}>
         <img src={CarCardIcon} alt="car" />
         <div>
           <h3>

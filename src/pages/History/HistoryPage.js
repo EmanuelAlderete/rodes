@@ -1,55 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HistoryPageStyled from "./HistoryPageStyles";
 import SearchBarComponent from "../../components/SearchBar/SearchBarComponent";
 import CardComponent from "../../components/Card/CardComponent";
 
-export default class HistoryPage extends React.Component {
-  render() {
-    const car = {
-      model: "Hilux",
-      automaker: "Toyota",
-      customer: "Albinão do Trovão"
-    };
-    return (
-      <HistoryPageStyled>
-        <SearchBarComponent hasFilter={true} />
-        <CardComponent
-          model={car.model}
-          automaker={car.automaker}
-          customer={car.customer}
-          day={car.day}
-          month={car.month}
-          year={car.year}
-          showDate
-        />
-        <CardComponent
-          model={car.model}
-          automaker={car.automaker}
-          customer={car.customer}
-          day={car.day}
-          month={car.month}
-          year={car.year}
-          showDate
-        />
-        <CardComponent
-          model={car.model}
-          automaker={car.automaker}
-          customer={car.customer}
-          day={car.day}
-          month={car.month}
-          year={car.year}
-          showDate
-        />
-        <CardComponent
-          model={car.model}
-          automaker={car.automaker}
-          customer={car.customer}
-          day={car.day}
-          month={car.month}
-          year={car.year}
-          showDate
-        />
-      </HistoryPageStyled>
-    );
-  }
-}
+const HistoryPage = props => {
+  const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    getCars();
+  });
+
+  const getCars = async () => {
+    const response = await fetch("http://localhost:3333/api/history");
+    const data = await response.json();
+
+    setCars(data);
+  };
+
+  return (
+    <HistoryPageStyled>
+      <SearchBarComponent hasFilter={true} />
+      {cars.map(car => (
+        <CardComponent object={car} key={car._id} showDate />
+      ))}
+    </HistoryPageStyled>
+  );
+};
+
+export default HistoryPage;

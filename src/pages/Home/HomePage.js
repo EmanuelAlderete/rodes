@@ -21,7 +21,7 @@ const HomePage = () => {
     <HomeStyles>
       <SearchBarComponent />
       {cars.map(car => (
-        <CardComponent object={car} />
+        <CardComponent object={car} key={car._id} />
       ))}
     </HomeStyles>
   );
