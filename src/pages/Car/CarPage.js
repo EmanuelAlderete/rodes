@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import CarPageStyled from "./CarStyles";
-
-import CarCardIcon from "../../assets/icons/car-card.svg";
-import CardComponent from "../../components/Card/CardComponent";
 import { Link } from "react-router-dom";
+
+import BreadcrumbComponent from "../../components/Breadcrumb/BreadCrumbComponent";
+import CardComponent from "../../components/Card/CardComponent";
 
 const CarPage = props => {
   const [car, setCar] = useState({ customer: {}, km_history: {} });
@@ -14,7 +14,6 @@ const CarPage = props => {
     );
     const data = await response.json();
     setCar(data);
-    console.log(data.customer._id);
   }
 
   useEffect(() => {
@@ -63,10 +62,10 @@ const CarPage = props => {
           </div>
         </div>
         <div className="btns">
-          <Link to={`/profile/${car.customer._id}`} className="darkBlue">
+          <Link to={`/app/cliente/${car.customer._id}`} className="darkBlue">
             Perfil Completo
           </Link>
-          <Link to={`car/${car.customer._id}/history`} className="darkGreen">
+          <Link to={`/app/veiculo/${car._id}/historico`} className="darkGreen">
             Histórico
           </Link>
         </div>

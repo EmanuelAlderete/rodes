@@ -27,7 +27,7 @@ const HeaderComponent = props => {
         </div>
       </div>
       <div className="bottomNav">
-        <NavLink to="/app/history" exact activeClassName="active">
+        <NavLink to="/app/historico" exact activeClassName="active">
           <div>
             <img src={HistoryIcon} alt="histórico" />
             <p>Histórico</p>
@@ -39,7 +39,7 @@ const HeaderComponent = props => {
             <p>Home</p>
           </div>
         </NavLink>
-        <NavLink to="/app/customers" exact activeClassName="active">
+        <NavLink to="/app/clientes" exact activeClassName="active">
           <div className="bar">
             <img src={CustomersIcon} alt="clientes" />
             <p>Clientes</p>
